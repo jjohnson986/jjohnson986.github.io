@@ -3,44 +3,97 @@
 #14213D
 #FCA311
 #E5E5E5
-#FFFFFF */
+#FFFFFF 
+font-family: "Nunito Sans", sans-serif;
+font-family: "Open Sans", sans-serif;
+*/
 
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #222831;
-    color: #EEEEEE;
-    font-family: "Nunito Sans", sans-serif;
-    margin: 0;
-}
-
-header{
-    background-color: #14213D;
-}
-
-footer {
-    background-color: #000000;
-    padding: 20px 0px 50px;
-    text-align: center;
-    margin: auto;
-}
-
-footer a {
-    font-size: 1.5rem;
-    font-variant: small-caps;
-    padding: 30px;
-}
-
-h1 {
-    color:#00ADB5;
+    background-color: #121212;
+    color: white;
     font-family: "Open Sans", sans-serif;
-    font-size: 4rem;
+    font-size: 1rem;
 }
 
 main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: black;
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    padding: 0 20px;
+}
+
+.projects-container {
+    margin: 0 auto;
+    border: 1px solid black;
+    /* padding: 20px; */
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    font-size: 2rem;
+    width: 800px;
     justify-content: center;
     align-items: center;
+}
+
+.game-item {
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px auto;
+}
+
+.game-title {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.game-item img {
+    width: 400px;
+    justify-self: end;
+}
+
+.game-info {
+    line-height: 1rem;
+    justify-self: start;
+}
+
+.game-info p {
+    padding: 0px;
+    margin: 1rem 0;
+}
+
+.game-role {
+    grid-column: span 2;
+    text-align: left;
+}
+
+@media (min-width: 400px) and (max-width: 1200px){
+    .game-item {
+        display: flex;
+        gap: 10px;
+        padding: 0 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
 }
