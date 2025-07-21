@@ -4,7 +4,8 @@
 
 .projects-tabs {
   display: flex;
-  gap: 12px;
+  justify-content: space-evenly;
+  /* gap: 12px; */
   margin-bottom: 18px;
 }
 
@@ -12,15 +13,23 @@
   background: #eee;
   border: none;
   padding: 10px 22px;
-  border-radius: 6px 6px 0 0;
+  width: 100%;
   cursor: pointer;
   font-weight: 500;
   color: #222;
   transition: background 0.2s;
 }
 
+.projects-tab:first {
+  /* border-radius: 6px 0 0 6px; */
+}
+
+.projects-tab:last {
+  /* border-radius: 0 6px 6px 0; */
+}
+
 .projects-tab.active {
-  background: #4caf50;
+  background: #4c8baf;
   color: #fff;
 }
 

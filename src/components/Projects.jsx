@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 
 const projectData = {
-  Web: [
+  Games: [
     {
       name: "Portfolio Site",
       description: "Personal portfolio built with React.",
@@ -12,7 +12,7 @@ const projectData = {
       description: "Online store with payment integration.",
     },
   ],
-  Mobile: [
+  Other: [
     {
       name: "Fitness Tracker",
       description: "React Native app for tracking workouts.",
@@ -22,7 +22,7 @@ const projectData = {
       description: "Mobile app for browsing and saving recipes.",
     },
   ],
-  Other: [
+  Personal: [
     {
       name: "CLI Tool",
       description: "Node.js command-line utility for automation.",

@@ -1,0 +1,27 @@
+.contacts-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 16px;
+}
+
+.contact-link {
+  color: #4c8baf;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-link:hover {
+  color: #4c8baf;
+}
+.contact-link svg {
+  width: 56px;
+  height: 56px;
+  fill: currentColor;
+}

@@ -19,15 +19,16 @@
 }
 
 .progress-bar {
-  background: #eee;
+  background: #ffffff;
   border-radius: 8px;
   height: 16px;
   width: 100%;
   overflow: hidden;
+  box-shadow: 2px 2px gray;
 }
 
 .progress-fill {
-  background: #4caf50;
+  background: #4c8baf;
   height: 100%;
   border-radius: 8px 0 0 8px;
 }

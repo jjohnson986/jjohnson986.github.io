@@ -2,10 +2,10 @@ import React from "react";
 import "./Skills.css";
 
 const skills = [
-  { name: "JavaScript", level: 90 },
-  { name: "React", level: 85 },
-  { name: "CSS", level: 80 },
-  { name: "Node.js", level: 75 },
+  { name: "C#, C++, Unity, Visual Studio", level: 90 },
+  { name: "Unreal, Git, JavaScript", level: 70 },
+  { name: "TypeScript, HTML, CSS", level: 50 },
+  { name: "React, Bootstrap, Copilot", level: 30 },
 ];
 
 export default function Skills() {
