@@ -1,0 +1,18 @@
+/* Add to your CSS file */
+.resume-button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: #4c8baf;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-shadow: 2px 2px gray;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.resume-button:hover {
+  background: #357099;
+}
