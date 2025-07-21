@@ -1,0 +1,39 @@
+.projects-section {
+  padding: 20px;
+}
+
+.projects-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.projects-tab {
+  background: #eee;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #222;
+  transition: background 0.2s;
+}
+
+.projects-tab.active {
+  background: #4caf50;
+  color: #fff;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  background: #f9f9f9;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 16px;
+}
