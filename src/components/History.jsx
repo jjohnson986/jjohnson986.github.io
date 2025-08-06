@@ -3,16 +3,27 @@ import "./History.css";
 
 const jobs = [
   {
-    company: "TechCorp",
-    role: "Frontend Developer",
-    year: "2022 - Present",
-    description:
-      "Building modern web interfaces and collaborating with designers.",
+    company: "WayForward Technologies",
+    role: "Generalist Programmer",
+    year: "2020-2023",
+    description: (
+      <ul>
+        <li>Utilized utility AI system in C# for Advance Wars 1+2 project.</li>
+        <li>
+          Revamped Online UI/UX to meet Nintendo's online play requirements.
+        </li>
+        <li>
+          Reduced memory usage and optimized frame rates for console release.
+        </li>
+        <li>Migrated legacy projects from Cocos Creator to Unity.</li>
+        <li>Prototyped new gameplay ideas for greenlight consideration.</li>
+      </ul>
+    ),
   },
   {
     company: "WebWorks",
     role: "Junior Developer",
-    year: "2020 - 2022",
+    year: "2018 - 2020",
     description:
       "Maintained client websites and learned full-stack development.",
   },

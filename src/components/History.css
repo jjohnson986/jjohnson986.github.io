@@ -6,7 +6,7 @@
   position: relative;
   margin-left: 30px;
   padding-left: 20px;
-  border-left: 2px solid #4caf50;
+  border-left: 2px solid cyan;
 }
 
 .timeline-item {
@@ -20,17 +20,18 @@
   top: 8px;
   width: 16px;
   height: 16px;
-  background: #4caf50;
+  background: #4c8baf;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #4caf50;
+  box-shadow: 0 0 0 2px cyan;
 }
 
 .timeline-content {
-  background: #f9f9f9;
+  background: rgb(53, 53, 53);
   padding: 14px 18px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 2px 2px 0 0 gray;
+  text-align: left;
 }
 
 .timeline-role {
