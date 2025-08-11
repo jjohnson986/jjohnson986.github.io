@@ -11,7 +11,7 @@ const skills = [
 export default function Skills() {
   return (
     <section className="skills-section">
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
       <ul className="skills-list">
         {skills.map((skill) => (
           <li key={skill.name} className="skill-item">

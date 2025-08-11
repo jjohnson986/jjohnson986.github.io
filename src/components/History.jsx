@@ -6,19 +6,13 @@ const jobs = [
     company: "WayForward Technologies",
     role: "Generalist Programmer",
     year: "2020-2023",
-    description: (
-      <ul>
-        <li>Utilized utility AI system in C# for Advance Wars 1+2 project.</li>
-        <li>
-          Revamped Online UI/UX to meet Nintendo's online play requirements.
-        </li>
-        <li>
-          Reduced memory usage and optimized frame rates for console release.
-        </li>
-        <li>Migrated legacy projects from Cocos Creator to Unity.</li>
-        <li>Prototyped new gameplay ideas for greenlight consideration.</li>
-      </ul>
-    ),
+    description: [
+      "Utilized utility AI system in C# for Advance Wars 1+2 project.",
+      "Revamped Online UI/UX to meet Nintendo's online play requirements.",
+      "Reduced memory usage and optimized frame rates for console release.",
+      "Migrated legacy projects from Cocos Creator to Unity.",
+      "Prototyped new gameplay ideas for greenlight consideration.",
+    ],
   },
   {
     company: "WebWorks",
@@ -47,7 +41,15 @@ export default function History() {
               <h3>{job.company}</h3>
               <span className="timeline-role">{job.role}</span>
               <span className="timeline-year">{job.year}</span>
-              <p>{job.description}</p>
+              {Array.isArray(job.description) ? (
+                <ul>
+                  {job.description.map((desc, i) => (
+                    <li key={i}>{desc}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{job.description}</p>
+              )}
             </div>
           </div>
         ))}

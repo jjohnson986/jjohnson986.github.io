@@ -26,6 +26,9 @@ const projectData = {
     {
       name: "Hypatia",
       status: "Shutdown",
+      engine: "Unreal Engine 4",
+      platform: "PC",
+      role: "Gameplay and UI Programmer",
       image:
         "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/401970/header.jpg?t=1551981518",
       link: "https://store.steampowered.com/app/401970/Hypatia/",
@@ -43,6 +46,9 @@ const projectData = {
     {
       name: "Kuboo",
       status: "Shutdown",
+      engine: "Unity",
+      platform: "PC",
+      role: "Unity Programmer",
       image: kubooImg,
       link: "",
       description: (
@@ -57,27 +63,38 @@ const projectData = {
   ],
   Other: [
     {
-      name: "Portfolio Site",
-      status: "Live",
-      image: "https://via.placeholder.com/80x80?text=Portfolio",
-      link: "https://your-portfolio-link.com",
-      description: "Personal portfolio built with React.",
+      name: "ImmTeach",
+      status: "Cancelled",
+      engine: "Unity",
+      platform: "Vive, Rift, Oculus Rift, Gear VR, Oculus Go, Cardboard",
+      role: "Lead Programmer",
+      description:
+        "An educational tool created in Unity using virtual reality. ",
     },
     {
-      name: "Portfolio Site",
+      name: "UGCS (Unified Ground Control Station)",
       status: "Live",
-      image: "https://via.placeholder.com/80x80?text=Portfolio",
-      link: "https://your-portfolio-link.com",
-      description: "Personal portfolio built with React.",
+      role: "Software Engineer",
+      link: "https://kuttatech.com/unified-ground-control-station/",
+      description: (
+        <div>
+          <b>Description from Kutta:</b> The Unified Ground Control Station
+          (UGCS) software application provides a unified Uncrewed Aircraft
+          System (UAS) command and control interface that seamlessly scales
+          across different hardware devices, operating systems, (Windows, Linux,
+          and Android) and display resolutions.
+        </div>
+      ),
     },
   ],
   Personal: [
     {
-      name: "Portfolio Site",
-      status: "Live",
-      image: "https://via.placeholder.com/80x80?text=Portfolio",
-      link: "https://your-portfolio-link.com",
-      description: "Personal portfolio built with React.",
+      name: "Project Elysium",
+      link: "https://github.com/jjohnson986/ProjectElysium",
+      status: "In Development",
+      engine: "Unity",
+      description:
+        "2.5D Side scroller done in Unity inspired by Megaman X. Private repository for now. Currently using it as a way to learn newer Unity features.",
     },
   ],
 };
@@ -104,23 +121,29 @@ export default function Projects() {
       <ul className="projects-list">
         {projectData[activeTab].map((project) => (
           <li key={project.name} className="project-item">
-            <div className="project-image">
-              <img src={project.image} alt={project.name} />
-            </div>
+            {project.image && (
+              <div className="project-image">
+                <img src={project.image} alt={project.name} />
+              </div>
+            )}
             <div className="project-details">
               <div className="project-header">
                 <h3 className="project-title">{project.name}</h3>
-                <span
-                  className={`project-status${
-                    project.status.toLowerCase() === "released"
-                      ? " status-live"
-                      : project.status.toLowerCase() === "shutdown"
-                      ? " status-shutdown"
-                      : ""
-                  }`}
-                >
-                  {project.status}
-                </span>
+                {project.status && (
+                  <span
+                    className={`project-status${
+                      project.status.toLowerCase() === "released" ||
+                      project.status.toLowerCase() === "live"
+                        ? " status-live"
+                        : project.status.toLowerCase() === "shutdown" ||
+                          project.status.toLowerCase() === "cancelled"
+                        ? " status-shutdown"
+                        : ""
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                )}
               </div>
               <div className="project-meta">
                 {project.engine && (

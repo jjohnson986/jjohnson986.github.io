@@ -45,15 +45,18 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  min-height: 350px;
+  overflow-y: auto;
 }
 
 .project-item {
   display: flex;
-  align-items: flex-start;
-  background: #f9f9f9;
+  align-items: center;
+  background: rgb(53, 53, 53);
   padding: 14px 18px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 2px 2px 0 0 gray;
   margin-bottom: 16px;
   gap: 18px;
 }
@@ -77,7 +80,7 @@
 }
 
 .project-title {
-  color: black;
+  /* color: black; */
   margin: 0;
   font-size: 1.2em;
 }
@@ -113,7 +116,7 @@
 .project-description {
   margin: 8px 0 0 0;
   text-align: left;
-  color: black;
+  /* color: black; */
 }
 
 .project-link {
