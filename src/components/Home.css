@@ -16,3 +16,8 @@
 .resume-button:hover {
   background: #357099;
 }
+
+.highlight {
+  color: #4c8baf;
+  font-weight: bold;
+}

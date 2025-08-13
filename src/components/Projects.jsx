@@ -94,7 +94,7 @@ const projectData = {
       status: "In Development",
       engine: "Unity",
       description:
-        "2.5D Side scroller done in Unity inspired by Megaman X. Private repository for now. Currently using it as a way to learn newer Unity features.",
+        "2D Side scroller done in Unity inspired by Megaman X. Private repository for now. Currently using it as a way to learn newer Unity features.",
     },
   ],
 };
@@ -105,7 +105,7 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <h2>Projects</h2>
       <div className="projects-tabs">
         {tabs.map((tab) => (

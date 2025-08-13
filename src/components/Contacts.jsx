@@ -33,7 +33,7 @@ const contacts = [
 
 export default function Contacts() {
   return (
-    <section className="contacts-section">
+    <section className="contacts-section" id="contacts">
       <h2>Links</h2>
       <div className="contacts-list">
         {contacts.map((contact) => (

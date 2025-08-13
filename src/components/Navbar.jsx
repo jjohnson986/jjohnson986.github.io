@@ -5,18 +5,22 @@ export default function Navbar() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
 
+  // Helper for smooth scroll
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setAboutOpen(false); // Close dropdown after scroll
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <button type="button" className="navbar-btn">
-            Home
-          </button>
+          <button type="button" className="navbar-btn" onClick={() => handleScroll("home")}>Home</button>
         </li>
-        <li
-          className="navbar-item dropdown-toggle"
-          style={{ position: "relative" }}
-        >
+        <li className="navbar-item dropdown-toggle" style={{ position: "relative" }}>
           <button
             type="button"
             className="navbar-btn"
@@ -28,26 +32,18 @@ export default function Navbar() {
           </button>
           <ul className={`dropdown-menu ${aboutOpen ? "show" : ""}`}>
             <li>
-              <button type="button" className="navbar-btn">
-                Skills
-              </button>
+              <button type="button" className="navbar-btn" onClick={() => handleScroll("skills")}>Skills</button>
             </li>
             <li>
-              <button type="button" className="navbar-btn">
-                History
-              </button>
+              <button type="button" className="navbar-btn" onClick={() => handleScroll("history")}>History</button>
             </li>
           </ul>
         </li>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn">
-            Projects
-          </button>
+          <button type="button" className="navbar-btn" onClick={() => handleScroll("projects")}>Projects</button>
         </li>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn">
-            Contact
-          </button>
+          <button type="button" className="navbar-btn" onClick={() => handleScroll("contacts")}>Contact</button>
         </li>
       </ul>
     </nav>

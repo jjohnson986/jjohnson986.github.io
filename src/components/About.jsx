@@ -4,7 +4,7 @@ import History from "./History";
 
 export default function About() {
   return (
-    <section className="hero">
+    <section className="hero" id="#about">
       <Skills />
       <History />
     </section>
