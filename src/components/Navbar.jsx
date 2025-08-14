@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [projectsOpen, setProjectsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Helper for smooth scroll
   const handleScroll = (id) => {
@@ -12,38 +12,50 @@ export default function Navbar() {
       el.scrollIntoView({ behavior: "smooth" });
     }
     setAboutOpen(false); // Close dropdown after scroll
+    setMenuOpen(false); // Close mobile menu after scroll
   };
 
   return (
     <nav className="navbar">
-      <ul className="navbar-list">
+      <button
+        className="navbar-hamburger"
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span className="navbar-hamburger-bar"></span>
+        <span className="navbar-hamburger-bar"></span>
+        <span className="navbar-hamburger-bar"></span>
+      </button>
+      <ul className={`navbar-list${menuOpen ? " open" : ""}`}>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn" onClick={() => handleScroll("home")}>Home</button>
-        </li>
-        <li className="navbar-item dropdown-toggle" style={{ position: "relative" }}>
           <button
             type="button"
             className="navbar-btn"
-            onClick={() => setAboutOpen(!aboutOpen)}
-            aria-haspopup="true"
-            aria-expanded={aboutOpen}
+            onClick={() => handleScroll("home")}
           >
-            About
+            Home
           </button>
-          <ul className={`dropdown-menu ${aboutOpen ? "show" : ""}`}>
-            <li>
-              <button type="button" className="navbar-btn" onClick={() => handleScroll("skills")}>Skills</button>
-            </li>
-            <li>
-              <button type="button" className="navbar-btn" onClick={() => handleScroll("history")}>History</button>
-            </li>
-          </ul>
         </li>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn" onClick={() => handleScroll("projects")}>Projects</button>
+          <button type="button" className="navbar-btn" onClick={() => handleScroll("about")}>About</button>
         </li>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn" onClick={() => handleScroll("contacts")}>Contact</button>
+          <button
+            type="button"
+            className="navbar-btn"
+            onClick={() => handleScroll("projects")}
+          >
+            Projects
+          </button>
+        </li>
+        <li className="navbar-item">
+          <button
+            type="button"
+            className="navbar-btn"
+            onClick={() => handleScroll("contacts")}
+          >
+            Contact
+          </button>
         </li>
       </ul>
     </nav>
