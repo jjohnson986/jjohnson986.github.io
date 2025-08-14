@@ -37,7 +37,13 @@ export default function Navbar() {
           </button>
         </li>
         <li className="navbar-item">
-          <button type="button" className="navbar-btn" onClick={() => handleScroll("about")}>About</button>
+          <button
+            type="button"
+            className="navbar-btn"
+            onClick={() => handleScroll("about")}
+          >
+            About
+          </button>
         </li>
         <li className="navbar-item">
           <button
