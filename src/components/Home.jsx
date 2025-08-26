@@ -11,7 +11,7 @@ export default function Home() {
         code.
       </p>
       <a
-        href="https://drive.google.com/file/d/1AkwAia_6SGDStdsXgiPzLXEiqIZfS6Yb/view?usp=sharing"
+        href="https://docs.google.com/document/d/1gY72OzO5hIvmCDyVEzY-6lblpKhXU8aMHEN5rswcYZs/edit?usp=drive_link"
         className="resume-button"
         target="_blank"
         rel="noopener noreferrer"
