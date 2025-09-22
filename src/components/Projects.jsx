@@ -90,12 +90,19 @@ const projectData = {
   Personal: [
     {
       name: "Project Elysium",
-      link: "https://github.com/jjohnson986/ProjectElysium",
+      link: "https://github.com/jjohnson986/ProjectEcho",
       status: "In Development",
-      engine: "Unity",
+      engine: "Unreal",
       description:
-        "2D Side scroller done in Unity inspired by Megaman X. Private repository for now. Currently using it as a way to learn newer Unity features.",
+        "2.5D Side scroller done in Unreal inspired by Megaman X. Private repository for now. Currently using it as a way to learn newer Unreal features.",
     },
+    // {
+    //   name: "Note Keeper App",
+    //   link: "https://github.com/jjohnson986/ProjectElysium",
+    //   status: "In Development",
+    //   description:
+    //     "A React app for keeping notes. Created from a tutorial to learn React. (Link will be updated when complete.)",
+    // },
   ],
 };
 
